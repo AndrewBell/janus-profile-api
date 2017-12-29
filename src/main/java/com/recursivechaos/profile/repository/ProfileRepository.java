@@ -11,7 +11,7 @@ import com.recursivechaos.profile.models.Profile;
 import org.springframework.data.repository.PagingAndSortingRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-@RepositoryRestResource(path = "/v1/profiles", collectionResourceRel = "profiles")
+@RepositoryRestResource(path = "/profiles", collectionResourceRel = "profiles")
 public interface ProfileRepository extends PagingAndSortingRepository<Profile, Long> {
 
 }
