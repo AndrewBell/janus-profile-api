@@ -1,7 +1,7 @@
 FROM openjdk:alpine
 
-COPY ./target/project-0.0.1-SNAPSHOT.jar /usr/src/app
+COPY build/libs/janus-profile-api-0.0.1-SNAPSHOT.jar /usr/src/app/
 
-WORKDIR /usr/src/app
+WORKDIR /usr/src/app/
 
-CMD ["java", "project-0.0.1-SNAPSHOT.jar"]
+CMD ["java", "-jar", "janus-profile-api-0.0.1-SNAPSHOT.jar"]

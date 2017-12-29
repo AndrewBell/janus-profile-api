@@ -20,6 +20,8 @@ Building Spring Data REST Repositories: https://spring.io/guides/gs/accessing-da
 
 Some requirements are optional, links are provided below.
 
+BASH - Windows users can use [Git for windows](http://gitforwindows.org/)
+
 [git](https://git-scm.com/downloads)
 
 [Java 8 JDK](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
@@ -34,10 +36,6 @@ This example uses [Lombok](https://projectlombok.org/), so you may need to confi
 
 ## Executing The Project
 
-### Build
-
-`gradle build`
-
 ### Test
 
 `gradle test`
@@ -46,11 +44,25 @@ This example uses [Lombok](https://projectlombok.org/), so you may need to confi
 
 `gradle bootRun`
 
-### Run Docker
+### Run Docker (optional)
 
 `docker build . --tag profile-api`
 
 `docker run profile-api`
+
+## View
+
+Open your browser or curl `localhost:8080`
+
+## Deploy
+
+Set up your project ID as an environment variable `export GCP_PROJECT_ID="my-demo-12345"`
+
+Run `sh ./deploy.sh profile-api`
+
+## Destroy
+
+To clean up, run `sh ./destroy.sh profile-api`
 
 # Contact Me
 
