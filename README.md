@@ -6,16 +6,6 @@ Provides RESTful CRUD operations for the Profile service. Built using Java 8 and
 
 CRUD operations for Profiles
 
-## References
-
-This example builds on previous works:
-
-Josh Long on Spring Boot Testing: https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing
-
-Code repo for above video: https://github.com/joshlong/bootiful-testing
-
-Building Spring Data REST Repositories: https://spring.io/guides/gs/accessing-data-rest/
-
 ## Requirements
 
 Some requirements are optional, links are provided below.
@@ -54,6 +44,8 @@ This example uses [Lombok](https://projectlombok.org/), so you may need to confi
 
 Open your browser or curl `localhost:8080`
 
+## Release
+
 ## Deploy
 
 Set up your project ID as an environment variable `export GCP_PROJECT_ID="my-demo-12345"`
@@ -64,9 +56,22 @@ Run `sh ./deploy.sh profile-api`
 
 To clean up, run `sh ./destroy.sh profile-api`
 
-# Contact Me
+## References
 
-Andrew Bell
+This example builds on previous works:
+
+Josh Long on Spring Boot Testing: https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing
+
+Code repo for above video: https://github.com/joshlong/bootiful-testing
+
+Building Spring Data REST Repositories: https://spring.io/guides/gs/accessing-data-rest/
+
+Gradle Release Plugin: https://github.com/researchgate/gradle-release
+
+
+## Contact Me
+
+### Andrew Bell ###
 
 homepage: www.recursivechaos.com
 
