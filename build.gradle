@@ -6,9 +6,11 @@ buildscript {
 		mavenCentral()
 		maven { url "https://repo.spring.io/snapshot" }
 		maven { url "https://repo.spring.io/milestone" }
+        maven { url "https://plugins.gradle.org/m2/" }
 	}
 	dependencies {
 		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+        classpath("gradle.plugin.net.vivin:gradle-semantic-build-versioning:4.0.0")
 	}
 }
 
@@ -22,13 +24,13 @@ task rename(type: Copy) {
     rename("janus-profile-api-${version}", 'profile-api')
 }
 
-
 afterReleaseBuild.dependsOn rename
 
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 apply plugin: 'io.spring.dependency-management'
+apply plugin: 'net.vivin.gradle-semantic-build-versioning'
 
 group = 'com.recursivechaos'
 sourceCompatibility = 1.8
