@@ -50,7 +50,7 @@ public class ProfileRepositoryTest {
     @Test
     public void shouldReturnAllProfiles() throws Exception {
         this.mockMvc
-            .perform(MockMvcRequestBuilders.get("/profiles"))
+            .perform(MockMvcRequestBuilders.get("/v1/profiles"))
             .andExpect(MockMvcResultMatchers.status().isOk())
             .andExpect(MockMvcResultMatchers.content().contentType("application/hal+json;charset=UTF-8"))
             .andExpect(MockMvcResultMatchers.jsonPath("@._embedded.profiles.[0].displayName").value(TEST_DISPLAY_NAME));
