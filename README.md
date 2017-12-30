@@ -46,6 +46,8 @@ Open your browser or curl `localhost:8080`
 
 ## Release
 
+`gradle release -Prelease.useAutomaticVersion=true -Prelease.releaseVersion=1.0.0 -Prelease.newVersion=1.0.1-SNAPSHOT`
+
 ## Deploy
 
 Set up your project ID as an environment variable `export GCP_PROJECT_ID="my-demo-12345"`
