@@ -36,13 +36,14 @@ repositories {
 	mavenCentral()
 	maven { url "https://repo.spring.io/snapshot" }
 	maven { url "https://repo.spring.io/milestone" }
+    maven { url "https://repo.spring.io/libs-milestone" }
 }
 
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-actuator')
 	compile('org.springframework.boot:spring-boot-starter-data-rest')
-    compile("org.springframework.boot:spring-boot-starter-data-jpa")
-	runtime('com.h2database:h2')
+    compile('org.springframework.boot:spring-boot-starter-data-jpa')
+    compile('org.springframework.cloud:spring-cloud-gcp:1.0.0.M1')
 	compileOnly('org.projectlombok:lombok')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 }
