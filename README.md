@@ -43,18 +43,47 @@ This example uses [Lombok](https://projectlombok.org/), so you may need to confi
 ## View
 
 Open your browser or curl `localhost:8080`
-
 ## Release
 
 `gradle release -Prelease.useAutomaticVersion=true -Prelease.releaseVersion=1.0.0 -Prelease.newVersion=1.0.1-SNAPSHOT`
 
 ## Deploy
 
+### Setup
+
 Set up your project ID as an environment variable `export GCP_PROJECT_ID="my-demo-12345"`
+
+### Create A Google Spanner Database
+
+[gcloud spanner docs](https://cloud.google.com/spanner/docs/gcloud-spanner)
+
+Create the instance:
+
+`gloud spanner instances create profile-instance --config=regional-us-central1 --description="Profile API Database" --nodes=1`
+
+Create the table:
+
+`gcloud spanner databases create profile-db --instance=profile-instance`
+
+Confirm the table:
+
+`gcloud spanner databases list --instance=profile-instance`
+
+Create a service account:
+
+[Service Accounts](https://cloud.google.com/iam/docs/service-accounts)
+
+### Deploy App
 
 Run `sh ./deploy.sh profile-api`
 
 ## Destroy
+
+### Database
+
+`gcloud spanner instances delete profile-instance`
+
+### App
 
 To clean up, run `sh ./destroy.sh profile-api`
 
@@ -62,13 +91,15 @@ To clean up, run `sh ./destroy.sh profile-api`
 
 This example builds on previous works:
 
-Josh Long on Spring Boot Testing: https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing
+[Josh Long on Spring Boot Testing](https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing)
 
-Code repo for above video: https://github.com/joshlong/bootiful-testing
+[Code repo for above video](]https://github.com/joshlong/bootiful-testing)
 
-Building Spring Data REST Repositories: https://spring.io/guides/gs/accessing-data-rest/
+[Building Spring Data REST Repositories](https://spring.io/guides/gs/accessing-data-rest/)
 
-Gradle Release Plugin: https://github.com/researchgate/gradle-release
+[Gradle Release Plugin](https://github.com/researchgate/gradle-release)
+
+[Spring Boot Data JPA w/ Google Cloud Spanner](https://olavloite.github.io/2017/03/11/Google-Cloud-Spanner-with-Spring-Boot-JPA-and-Hibernate.html)
 
 
 ## Contact Me
