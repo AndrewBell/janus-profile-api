@@ -43,6 +43,7 @@ This example uses [Lombok](https://projectlombok.org/), so you may need to confi
 ## View
 
 Open your browser or curl `localhost:8080`
+
 ## Release
 
 `gradle release -Prelease.useAutomaticVersion=true -Prelease.releaseVersion=1.0.0 -Prelease.newVersion=1.0.1-SNAPSHOT`
@@ -57,19 +58,25 @@ Set up your project ID as an environment variable `export GCP_PROJECT_ID="my-dem
 
 [gcloud spanner docs](https://cloud.google.com/spanner/docs/gcloud-spanner)
 
+#### Manually
+
 Create the instance:
 
-`gloud spanner instances create profile-instance --config=regional-us-central1 --description="Profile API Database" --nodes=1`
+`gcloud spanner instances create profile-instance --config=regional-us-central1 --description="Profile API Database" --nodes=1`
 
-Create the table:
+Create the database:
 
 `gcloud spanner databases create profile-db --instance=profile-instance`
 
-Confirm the table:
+Confirm the database:
 
 `gcloud spanner databases list --instance=profile-instance`
 
 Create a service account:
+
+#### Script
+
+`sh ./deploy-db.sh profile-api`
 
 [Service Accounts](https://cloud.google.com/iam/docs/service-accounts)
 
@@ -81,7 +88,13 @@ Run `sh ./deploy.sh profile-api`
 
 ### Database
 
+#### Manually
+
 `gcloud spanner instances delete profile-instance`
+
+#### Script
+
+To destroy the Spanner instance (losing your data), run `sh ./destroy.sh profile-api`
 
 ### App
 

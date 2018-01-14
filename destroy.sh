@@ -5,7 +5,7 @@
 # `sh ./destroy app-name`
 #
 
-err() {
+log() {
   echo "[$(date +'%Y-%m-%dT%H:%M:%S%z')]: $@" >&2
 }
 
@@ -14,12 +14,15 @@ err() {
 app_name='';
 
 if [ -z "$1" ]; then
-  err "Please pass a app name."
+  log "Please pass a app name."
   exit 1
 fi
 
 app_name=$1
 
 if ! kubectl delete service $app_name ; then
+  log "Could not delete service $app_name. You should run `kubectl delete service $app_name` and troubleshoot"
+  exit 1
 fi
 
+echo "All cleaned up"
