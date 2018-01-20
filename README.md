@@ -62,14 +62,13 @@ To clean up, run `sh ./destroy.sh profile-api`
 
 This example builds on previous works:
 
-Josh Long on Spring Boot Testing: https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing
+[Josh Long on Spring Boot Testing](https://spring.io/blog/2017/11/22/spring-tips-bootiful-testing)
 
-Code repo for above video: https://github.com/joshlong/bootiful-testing
+[Code repo for above video](]https://github.com/joshlong/bootiful-testing)
 
-Building Spring Data REST Repositories: https://spring.io/guides/gs/accessing-data-rest/
+[Building Spring Data REST Repositories](https://spring.io/guides/gs/accessing-data-rest/)
 
-Gradle Release Plugin: https://github.com/researchgate/gradle-release
-
+[Gradle Release Plugin](https://github.com/researchgate/gradle-release)
 
 ## Contact Me
 
