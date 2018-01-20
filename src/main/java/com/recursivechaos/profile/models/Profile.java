@@ -9,25 +9,30 @@ package com.recursivechaos.profile.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Profile {
+@EqualsAndHashCode(callSuper = true)
+public class Profile extends BaseEntity {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private long id;
+    private static final long serialVersionUID = 1L;
+
+    @Column(length = 50, nullable = true)
     private String displayName;
+
+    @Column(length = 50, nullable = true)
     private String email;
+
+    @Column(length = 50, nullable = true)
     private String location;
+
+    @Column(length = 50, nullable = true)
     private String title;
 
 }

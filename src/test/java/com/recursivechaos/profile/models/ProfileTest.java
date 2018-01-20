@@ -17,7 +17,7 @@ public class ProfileTest {
     @Test
     public void allArgsConstructor() {
 
-        Profile testProfile = new Profile(1L, TEST_DISPLAY_NAME, TEST_EMAIL, TEST_LOCATION, TEST_TITLE);
+        Profile testProfile = new Profile(TEST_DISPLAY_NAME, TEST_EMAIL, TEST_LOCATION, TEST_TITLE);
 
         assertEquals(testProfile.getDisplayName(), TEST_DISPLAY_NAME);
         assertEquals(testProfile.getEmail(), TEST_EMAIL);

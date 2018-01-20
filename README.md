@@ -112,7 +112,7 @@ This example builds on previous works:
 
 [Gradle Release Plugin](https://github.com/researchgate/gradle-release)
 
-[Spring Boot Data JPA w/ Google Cloud Spanner](https://olavloite.github.io/2017/03/11/Google-Cloud-Spanner-with-Spring-Boot-JPA-and-Hibernate.html)
+[Spring Boot Data JPA w/ Google Cloud Spanner](http://www.googlecloudspanner.com/2017/09/google-cloud-spanner-with-jpa-and.html)
 
 
 ## Contact Me

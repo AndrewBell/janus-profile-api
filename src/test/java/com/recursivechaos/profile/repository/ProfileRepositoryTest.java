@@ -42,7 +42,7 @@ public class ProfileRepositoryTest {
 
     @Before
     public void setUp() throws Exception {
-        List<Profile> profiles = Arrays.asList(new Profile(1L, TEST_DISPLAY_NAME, TEST_EMAIL, TEST_LOCATION, TEST_TITLE));
+        List<Profile> profiles = Arrays.asList(new Profile(TEST_DISPLAY_NAME, TEST_EMAIL, TEST_LOCATION, TEST_TITLE));
 
         profileRepository.saveAll(profiles);
     }
