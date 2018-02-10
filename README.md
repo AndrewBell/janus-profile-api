@@ -2,9 +2,17 @@
 
 Provides RESTful CRUD operations for the Profile service. Built using Java 8 and Spring Boot 2.0.
 
+* Java 8
+
+* Spring Boot 2.0
+
+* Gradle
+
+* Google Cloud SQL
+
 ## Goals
 
-CRUD operations for Profiles
+CRUD operations for Profiles, persisted to cloud database
 
 ## Requirements
 
@@ -62,8 +70,6 @@ To clean up, run `sh ./destroy.sh profile-api`
 
 ## Deploy Database
 
-[Instance Pricing](https://cloud.google.com/sql/pricing#2nd-gen-instance-pricing)
-
 This follows Google's [Create an Instance](https://cloud.google.com/sql/docs/mysql/create-instance)
 
 Show the list of available tiers:
@@ -107,11 +113,15 @@ Set the following in your `application.properties`:
  
  `spring.jpa.hibernate.ddl-auto=update`
  
- Your application should connect to your Google Cloud SQL instance. Try by posting the following request to create data:
+Your application should connect to your Google Cloud SQL instance. Try by posting the following request to create data:
  
  `curl --header 'Content-Type: application/json' \
        --data '{"displayName": "Brennan", "email": "a@b.com", "location": "3B", "title":"Overseer"}' \
        localhost:8080/v1/profiles -X POST`
+
+Fetch your profiles
+
+ `curl localhost:8080/v1/profiles`
 
 ## References
 

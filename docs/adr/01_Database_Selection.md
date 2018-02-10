@@ -1,6 +1,5 @@
 # 01 Database Selection
 
-
 ## Goal
 
 What database technology will give us the most flexibility and ease of us?
@@ -21,6 +20,9 @@ Cons:
 ### [Google Cloud SQL](https://cloud.google.com/sql/)
 
 Google Cloud has introduced managed SQL services for Postgres and MySQL
+
+Notes:
+* Postgres support is in Beta
 
 Pros: 
 * High familiarity with devs
@@ -51,6 +53,12 @@ Cons:
 ## Proposed Change
 
 Use Google Cloud SQL to speed development, but may investigate less locked in solutions in the future.
+
+## Links
+
+[Google Choosing a Storage Condition](https://cloud.google.com/storage-options/)
+
+[Pricing Tiers](https://cloud.google.com/sql/pricing#2nd-gen-instance-pricing)
 
 Spring Cloud GCP (Data JPA support): https://cloud.spring.io/spring-cloud-gcp/
 
